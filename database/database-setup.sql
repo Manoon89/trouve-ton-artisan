@@ -38,7 +38,7 @@ CREATE TABLE IF NOT EXISTS `specialite` (
 CREATE TABLE IF NOT EXISTS `artisan` (
     `id_artisan` INT NOT NULL UNIQUE AUTO_INCREMENT, 
     `nom_artisan` VARCHAR(45) NOT NULL, 
-    `note_artisan` DECIMAL (1,1), 
+    `note_artisan` DECIMAL (2,1), 
     `a_propos_artisan` VARCHAR(250), 
     `email_artisan` VARCHAR(45) NOT NULL UNIQUE, 
     `site_web_artisan` VARCHAR(150), 
