@@ -1,5 +1,12 @@
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
+
+const categorieRoute = require('../routes/categories.js');
+
+// On récupère les fichiers routes existants
+router.use('/categories', categorieRoute) ;
+
+
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
