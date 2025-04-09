@@ -44,7 +44,10 @@ INSERT INTO `specialite` (`id_specialite`, `nom_specialite`, `id_categorie`) VAL
 (15, 'Webdesign', 4) ;
 
 -- Peuplement de la table artisan du mois. On saisit l'id pour plus de facilité lors de la création de la table artisan.
--- TODO Changement à faire sur l'organisation pour que la table artisan du mois ait une FOREIGN KEY vers artisan & non l'inverse
+INSERT INTO `artisan_mois` (`mois_annee`, `id_artisan`) VALUES
+('avril 2025', 2), 
+('avril 2025', 3), 
+('avril 2025', 5) ;
 
 -- Peuplement de la table artisan. On saisit l'id pour plus de facilité lors de la création de la table artisan du mois. 
 INSERT INTO `artisan` (`id_artisan`, `nom_artisan`, `note_artisan`, `a_propos_artisan`, `email_artisan`, `site_web_artisan`, `id_specialite`, `id_ville`) VALUES
