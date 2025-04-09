@@ -34,15 +34,6 @@ CREATE TABLE IF NOT EXISTS `specialite` (
     FOREIGN KEY (`id_categorie`) REFERENCES `categorie` (`id_categorie`)
 ) ENGINE=InnoDB ;
 
--- On crée la table artisan du mois, en indiquant par défaut que la valeur pour 'artisan du mois' est "FAUX". 
-CREATE TABLE IF NOT EXISTS `artisan_mois` (
-    `id_artisan_mois` INT NOT NULL UNIQUE AUTO_INCREMENT, 
-    `mois_annee` VARCHAR(15) NOT NULL UNIQUE, 
-    `id_artisan` INT NOT NULL, 
-    PRIMARY KEY (`id_artisan_mois`), 
-    FOREIGN KEY (`id_artisan`) REFERENCES `artisan` (`id_artisan`)
-) ENGINE=InnoDB ;
-
 -- On crée enfin la table artisan avec toutes les foreign key qui le relient aux autres tables
 CREATE TABLE IF NOT EXISTS `artisan` (
     `id_artisan` INT NOT NULL UNIQUE AUTO_INCREMENT, 
@@ -50,7 +41,7 @@ CREATE TABLE IF NOT EXISTS `artisan` (
     `note_artisan` DECIMAL (1,1), 
     `a_propos_artisan` VARCHAR(250), 
     `email_artisan` VARCHAR(45) NOT NULL UNIQUE, 
-    `site_web_artisan` VARCHAR(150) UNIQUE, 
+    `site_web_artisan` VARCHAR(150), 
     `lien_image_artisan` VARCHAR(150), 
     `id_specialite` INT NOT NULL, 
     `id_ville` INT NOT NULL, 
@@ -58,5 +49,14 @@ CREATE TABLE IF NOT EXISTS `artisan` (
     PRIMARY KEY (`id_artisan`), 
     FOREIGN KEY (`id_specialite`) REFERENCES `specialite`(`id_specialite`), 
     FOREIGN KEY (`id_ville`) REFERENCES `ville`(`id_ville`), 
-    KEY (`nom_artisan`), 
+    KEY (`nom_artisan`)
+) ENGINE=InnoDB ;
+
+-- On crée la table artisan du mois, en indiquant par défaut que la valeur pour 'artisan du mois' est "FAUX". 
+CREATE TABLE IF NOT EXISTS `artisan_mois` (
+    `id_artisan_mois` INT NOT NULL UNIQUE AUTO_INCREMENT, 
+    `mois_annee` VARCHAR(15) NOT NULL, 
+    `id_artisan` INT NOT NULL, 
+    PRIMARY KEY (`id_artisan_mois`), 
+    FOREIGN KEY (`id_artisan`) REFERENCES `artisan` (`id_artisan`)
 ) ENGINE=InnoDB ;

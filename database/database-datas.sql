@@ -43,12 +43,6 @@ INSERT INTO `specialite` (`id_specialite`, `nom_specialite`, `id_categorie`) VAL
 (14, 'Traiteur', 1), 
 (15, 'Webdesign', 4) ;
 
--- Peuplement de la table artisan du mois. On saisit l'id pour plus de facilité lors de la création de la table artisan.
-INSERT INTO `artisan_mois` (`mois_annee`, `id_artisan`) VALUES
-('avril 2025', 2), 
-('avril 2025', 3), 
-('avril 2025', 5) ;
-
 -- Peuplement de la table artisan. On saisit l'id pour plus de facilité lors de la création de la table artisan du mois. 
 INSERT INTO `artisan` (`id_artisan`, `nom_artisan`, `note_artisan`, `a_propos_artisan`, `email_artisan`, `site_web_artisan`, `id_specialite`, `id_ville`) VALUES
 (1, 'Boucherie Dumont', 4.5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 'boucherie.dumond@gmail.com', '', 2, 9), 
@@ -68,3 +62,9 @@ INSERT INTO `artisan` (`id_artisan`, `nom_artisan`, `note_artisan`, `a_propos_ar
 (15, 'Le monde des fleurs', 4.6, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 'contact@le-monde-des-fleurs-annonay.fr', 'https://le-monde-des-fleurs-annonay.fr', 10, 3), 
 (16, 'Valérie Laderoute', 4.5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 'v-laredoute@gmail.com', '', 13, 13), 
 (17, 'CM Graphisme', 4.4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 'contact@cm-graphisme.com', 'https://cm-graphisme.com', 15, 13) ;
+
+-- Peuplement de la table artisan du mois. On saisit l'id pour plus de facilité lors de la création de la table artisan.
+INSERT INTO `artisan_mois` (`mois_annee`, `id_artisan`) VALUES
+('avril 2025', 2), 
+('avril 2025', 3), 
+('avril 2025', 5) ;
