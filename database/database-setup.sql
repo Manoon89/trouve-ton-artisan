@@ -45,7 +45,6 @@ CREATE TABLE IF NOT EXISTS `artisan` (
     `lien_image_artisan` VARCHAR(150), 
     `id_specialite` INT NOT NULL, 
     `id_ville` INT NOT NULL, 
-    `id_artisan_mois` INT NOT NULL, 
     PRIMARY KEY (`id_artisan`), 
     FOREIGN KEY (`id_specialite`) REFERENCES `specialite`(`id_specialite`), 
     FOREIGN KEY (`id_ville`) REFERENCES `ville`(`id_ville`), 
