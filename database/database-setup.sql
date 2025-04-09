@@ -55,5 +55,6 @@ CREATE TABLE IF NOT EXISTS `artisan` (
     PRIMARY KEY (`id_artisan`), 
     FOREIGN KEY (`id_specialite`) REFERENCES `specialite`(`id_specialite`), 
     FOREIGN KEY (`id_ville`) REFERENCES `ville`(`id_ville`), 
-    FOREIGN KEY (`id_artisan_mois`) REFERENCES `artisan_mois`(`id_artisan_mois`)
+    FOREIGN KEY (`id_artisan_mois`) REFERENCES `artisan_mois`(`id_artisan_mois`), 
+    KEY (`nom_artisan`), 
 ) ENGINE=InnoDB ;
