@@ -51,6 +51,7 @@ CREATE TABLE IF NOT EXISTS `artisan` (
     `a_propos_artisan` VARCHAR(250), 
     `email_artisan` VARCHAR(45) NOT NULL UNIQUE, 
     `site_web_artisan` VARCHAR(150) UNIQUE, 
+    `lien_image_artisan` VARCHAR(150), 
     `id_specialite` INT NOT NULL, 
     `id_ville` INT NOT NULL, 
     `id_artisan_mois` INT NOT NULL, 
