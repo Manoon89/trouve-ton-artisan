@@ -1,7 +1,6 @@
 import React from 'react' ;
 import Header from "../components/header" ;
 import Footer from "../components/footer" ;
-import MonthArtisan from '../components/artisan-of-month';
 import Bulb from '../assets/icons/bulb.svg' ;
 import Arrow from '../assets/icons/arrow-right.svg' ;
 
@@ -23,9 +22,7 @@ export default function Accueil() {
                 <section>
                     <img src={Arrow} alt="icône de lampe" width="2%" />
                     <h2>Les artisans du mois</h2>
-                    <MonthArtisan title="TODO" note="TODO" specialite="TODO" ville="TODO" />
-                    <MonthArtisan title="TODO" />
-                    <MonthArtisan title="TODO" />
+                    {/*TODO : artisans du mois*/}
                 </section>
             </main>
             <Footer />

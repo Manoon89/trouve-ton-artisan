@@ -11,12 +11,18 @@ export default function Nav() {
     // On récupère avec fetch les informations de l'api ; on stocke la réponse en json puis les données complètent le tableau
     // défini ci-dessus
     useEffect(() => {
-        fetch('http://localhost:3000/api/categories')
-            .then((response) => response.json())
-            .then((data) => setCategories(data))
-            .catch((error) => console.error('Erreur lors de la récupération des catégories :', error)) ;
-    }, 
-    []);
+        const fetchCategories = async () => {
+            try {
+                const response = await fetch('http://localhost:3000/api/categories');
+                const data = await response.json();
+                setCategories(data);
+            } catch (error) {
+                console.error('Erreur lors de la récupération des catégories :', error);
+            }
+        };
+    
+        fetchCategories();
+    }, []); // Cette fonction s'exécutera seulement une fois après le premier rendu
 
     return (
     
