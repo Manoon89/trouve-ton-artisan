@@ -1,4 +1,4 @@
-const { Datatypes } = require('sequelize') ;
+/*const { Datatypes } = require('sequelize') ;
 const Specialite = require('./specialite') ;
 
 const Categorie = sequelize.define('Categorie', {
@@ -18,4 +18,4 @@ const Categorie = sequelize.define('Categorie', {
 
 Categorie.hasMany(Specialite, {foreignKey: 'id_categorie', constraints: false}) ;
 
-module.exports = Categorie ;
+module.exports = Categorie ;*/

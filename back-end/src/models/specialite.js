@@ -1,5 +1,6 @@
-const { Datatypes } = require('sequelize') ;
+/*const { Datatypes } = require('sequelize') ;
 const Categorie = require('./categorie') ;
+const sequelize = require('sequelize') ;
 
 const Specialite = sequelize.define('Specialite', {
     id_specialite: {
@@ -22,4 +23,4 @@ const Specialite = sequelize.define('Specialite', {
 
 Specialite.belongsTo(Categorie, {foreignKey: 'id_categorie', contraints: false}) ;
 
-module.exports = Specialite ;
+module.exports = Specialite ;*/
