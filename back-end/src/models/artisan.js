@@ -1,4 +1,4 @@
-const { Datatypes } = require('sequelize') ;
+/*const { Datatypes } = require('sequelize') ;
 const Ville = require('./ville') ;
 const Specialite = require('./specialite') ;
 
@@ -45,4 +45,4 @@ const Artisan = sequelize.define('Artisan', {
 Artisan.belongsTo(Ville, {foreignKey: 'id_ville', contraints: false}) ;
 Artisan.belongsTo(Specialite, {foreignKey: 'id_specialite', contraints: false}) ;
 
-module.exports = Artisan ;
+module.exports = Artisan ;*/

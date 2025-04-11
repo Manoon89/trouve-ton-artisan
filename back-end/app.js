@@ -1,12 +1,19 @@
-var express = require('express');
-var path = require('path');
-var cookieParser = require('cookie-parser');
-var logger = require('morgan');
+const express = require('express');
+const path = require('path');
+const cookieParser = require('cookie-parser');
+const logger = require('morgan');
+require("dotenv").config(); 
+const cors = require ('cors') ;
 
-var indexRouter = require('./routes/index');
-var usersRouter = require('./routes/users');
+const indexRouter = require('./src/routes/index');
 
-var app = express();
+const app = express();
+
+app.use(cors({
+    origin: 'http://localhost:5174',  // Permet les requêtes de ce domaine
+    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permet certains types de requêtes
+    allowedHeaders: ['Content-Type', 'Authorization']  // Permet certaines headers
+}));
 
 app.use(logger('dev'));
 app.use(express.json());
@@ -14,7 +21,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRouter);
-app.use('/users', usersRouter);
+app.use('/api', indexRouter);
 
 module.exports = app;

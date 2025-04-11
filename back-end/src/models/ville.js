@@ -1,4 +1,4 @@
-const { Datatypes } = require('sequelize') ;
+/*const { Datatypes } = require('sequelize') ;
 const Artisan = require('./artisan') ;
 
 const Ville = sequelize.define('Ville', {
@@ -18,4 +18,4 @@ const Ville = sequelize.define('Ville', {
 
 Ville.hasMany(Artisan, {foreignKey: 'id_ville', constraints: false}) ;
 
-module.exports = Ville ;
+module.exports = Ville ;*/

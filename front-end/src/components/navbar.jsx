@@ -1,8 +1,19 @@
-import React from 'react' ;
+import React, {useEffect, useState} from 'react' ;
 import Logo from '../assets/images/logo.png' ;
 import Search from '../assets/icons/search.svg' ;
+import { Link } from 'react-router-dom' ;
 
 export default function Nav() {
+
+    const [categories, setCategories] = useState([]) ;
+
+    useEffect(() => {
+        fetch('http://localhost:3000/api/categories')
+            .then((response) => response.json())
+            .then((data) => setCategories(data))
+            .catch((error) => console.error('Erreur lors de la récupération des catégories :', error)) ;
+    }, 
+    []);
 
     return (
     
@@ -21,9 +32,13 @@ export default function Nav() {
             </form>
 
             <ul>
-                <li>
-                    <a href="#">MENU TODO</a>
-                </li>
+                {categories.map((categorie) => (
+                    <li key={categorie.id_categorie}>
+                        <Link to={`/categories/${categorie.id_categorie}`}>
+                            {categorie.nom_categorie}
+                        </Link>
+                    </li>
+                ))}
             </ul>
         </nav>
 
