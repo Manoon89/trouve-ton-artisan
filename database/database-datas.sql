@@ -63,8 +63,12 @@ INSERT INTO `artisan` (`id_artisan`, `nom_artisan`, `note_artisan`, `a_propos_ar
 (16, 'Valérie Laderoute', 4.5, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 'v-laredoute@gmail.com', '', 13, 13), 
 (17, 'CM Graphisme', 4.4, 'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus eleifend ante sem, id volutpat massa fermentum nec. Praesent volutpat scelerisque mauris, quis sollicitudin tellus sollicitudin.', 'contact@cm-graphisme.com', 'https://cm-graphisme.com', 15, 13) ;
 
--- Peuplement de la table artisan du mois. On saisit l'id pour plus de facilité lors de la création de la table artisan.
-INSERT INTO `artisan_mois` (`mois_annee`, `id_artisan`) VALUES
-('avril 2025', 2), 
-('avril 2025', 3), 
-('avril 2025', 5) ;
+-- Peuplement de la table mois-année. Pas de données dans le devoir donc on part juste sur le mois en cours pour pouvoir remonter les artisans
+INSERT INTO `mois_annee` (`id_mois_annee`, `mois_annee`) VALUES
+(1, 'avril 2025') ;
+
+-- Peuplement de la table artisan du mois.
+INSERT INTO `artisan_mois` (`id_artisan`, `id_mois_annee`) VALUES
+(2, 1), 
+(3, 1), 
+(5, 1) ;

@@ -30,9 +30,10 @@ WHERE `artisan`.`nom_artisan` = 'Mont Blanc Eléctricité' ;
 -- Vérification une fois correction apportée : ok
 
 -- Test 3 : vérifier les artisans du mois
-SELECT `artisan`.`nom_artisan` FROM `artisan_mois`
+SELECT `artisan`.`nom_artisan`, `mois_annee`.`mois_annee` FROM `artisan_mois`
 INNER JOIN `artisan` ON `artisan_mois`.`id_artisan` = `artisan`.`id_artisan`
-WHERE `artisan_mois`.`mois_annee` = 'avril 2025' ;
+INNER JOIN `mois_annee` ON `artisan_mois`.`id_mois_annee` = `mois_annee`.`id_mois_annee`
+WHERE `mois_annee`.`mois_annee` = 'avril 2025' ;
 
 -- Résultat attendu : Au pain chaud, Chocolaterie Labbé, Orville Salmons
 -- Résultat obtenu : Au pain chaud, Chocolaterie Labbé, Orville Salmons
