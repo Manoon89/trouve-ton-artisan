@@ -1,19 +1,19 @@
-/*const { Datatypes } = require('sequelize') ;
+const { DataTypes } = require('sequelize') ;
+const { sequelize } = require('../../config/sequelize') ;
 const Categorie = require('./categorie') ;
-const sequelize = require('sequelize') ;
 
 const Specialite = sequelize.define('Specialite', {
     id_specialite: {
-        type: Datatypes.INTEGER, 
+        type: DataTypes.INTEGER, 
         autoIncrement: true, 
         primaryKey: true
     }, 
     nom_specialite: {
-        type: Datatypes.STRING(30), 
+        type: DataTypes.STRING(30), 
         allowNull: false
     }, 
     id_categorie: {
-        type: Datatypes.INTEGER, 
+        type: DataTypes.INTEGER, 
         allowNull: false
     }
 }, {
@@ -21,6 +21,8 @@ const Specialite = sequelize.define('Specialite', {
     timestamps: false
 }) ;
 
-Specialite.belongsTo(Categorie, {foreignKey: 'id_categorie', contraints: false}) ;
+console.log('Categorie:', Categorie);
 
-module.exports = Specialite ;*/
+Specialite.belongsTo(Categorie, {foreignKey: 'id_categorie'}) ;
+
+module.exports = Specialite ;

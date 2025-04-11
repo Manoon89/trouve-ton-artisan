@@ -8,9 +8,7 @@ export default function Detail() {
         <div>
             <Header title="TODO : récupérer le nom de l'artisan concerné" />
             <main>
-                <img src="#" alt="image de l'artisan" />
-                {/*TODO : étoiles pour la note*/}
-                <p>TODO : récupérer les informations de l'artisan (note, spécialité, localisation, à propos)</p>
+                <Artisan />
                 <Form />
             </main>
             <Footer />

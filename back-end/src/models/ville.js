@@ -1,14 +1,15 @@
-/*const { Datatypes } = require('sequelize') ;
+const { DataTypes } = require('sequelize') ;
+const { sequelize } = require('../../config/sequelize') ;
 const Artisan = require('./artisan') ;
 
 const Ville = sequelize.define('Ville', {
     id_ville: {
-        type: Datatypes.INTEGER, 
+        type: DataTypes.INTEGER, 
         autoIncrement: true, 
         primaryKey: true
     }, 
     nom_ville: {
-        type: Datatypes.STRING(45), 
+        type: DataTypes.STRING(45), 
         allowNull: false
     }
 }, {
@@ -16,6 +17,4 @@ const Ville = sequelize.define('Ville', {
     timestamps: false
 }) ;
 
-Ville.hasMany(Artisan, {foreignKey: 'id_ville', constraints: false}) ;
-
-module.exports = Ville ;*/
+module.exports = Ville ;

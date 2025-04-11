@@ -5,8 +5,11 @@ import { Link } from 'react-router-dom' ;
 
 export default function Nav() {
 
+    // On crée un tableau vide qui sera complété lors de la récupération des données par l'API. 
     const [categories, setCategories] = useState([]) ;
 
+    // On récupère avec fetch les informations de l'api ; on stocke la réponse en json puis les données complètent le tableau
+    // défini ci-dessus
     useEffect(() => {
         fetch('http://localhost:3000/api/categories')
             .then((response) => response.json())
