@@ -14,7 +14,7 @@ const sequelize = new Sequelize(
     }
 );
 
-exports.databaseConnexion = async () => {
+const databaseConnexion = async () => {
     console.log("Tentative de connexion à la base de données...")
     try {
         await Promise.race([
@@ -28,3 +28,5 @@ exports.databaseConnexion = async () => {
         throw error ;
     }
 } ;
+
+module.exports = { sequelize, databaseConnexion } ;
