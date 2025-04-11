@@ -1,0 +1,9 @@
+@import "bootstrap/scss/functions" ;
+@import "bootstrap/scss/variables" ;
+@import "bootstrap/scss/mixins" ;
+// On importe maintenant les composants Bootstrap dont on a besoin : 
+@import "bootstrap/scss/forms" ;
+@import "bootstrap/scss/navbar" ;
+
+// On définit la couleur primaire par défaut pour qu'elle ne soit plus celle définie par Bootstrap
+$primary: #0074c7 ;
