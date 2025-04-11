@@ -2,9 +2,7 @@ const Categorie = require('../models/categorie') ;
 
 exports.getAll = async (req, res, next) => {
     try {
-        const categories = await Categorie.findAll({
-            attributes: ['nom_categorie'] 
-        });
+        const categories = await Categorie.findAll();
         res.json(categories) ;
     } 
     catch (error) {
