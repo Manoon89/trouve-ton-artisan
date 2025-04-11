@@ -3,14 +3,14 @@ import logo from '../assets/images/logo.png' ;
 
 export default function Footer() {
     return (
-        <footer className="bg-primary container-fluid p-4 m-auto mt-4">
-            <div className="row d-flex w-md-75 m-auto">
-                <section className="col-md-4">
+        <footer>
+                {/* on met une balise div car il n'y a pas de titre pour cette section*/}
+                <div>
                     <img src={logo} alt="logo du site trouve ton artisan" width="30%"/>
-                </section>
+                </div>
 
-                <section className="col-md-4">
-                    <p>Adresse et contact :</p>
+                <section>
+                    <h3>Adresse et contact :</h3>
                     <address>
                         <p>Lyon</p>
                         <p>101 cours Charlemagne</p>
@@ -21,14 +21,13 @@ export default function Footer() {
                     </address>
                 </section>
 
-                <section className="col-md-4">
+                <div>
                     <a href="#">Mentions légales</a>                
                     <a href="#">Données personnelles</a>
                     <a href="#">Accessibilité</a>
                     <a href="#">Politique des cookies</a>
                     <a href="#">Gestion des cookies</a>
-                </section>
-            </div>
+                </div>
         </footer>
     )
 }
