@@ -16,7 +16,7 @@ export default function Detail() {
     useEffect(() => {
         const fetchArtisan = async () => {
             try {
-                const response = await fetch(`http://localhost:3000/api/artisan/${id}`);
+                const response = await fetch(`http://localhost:5000/api/artisan/${id}`);
                 const data = await response.json();
                 setArtisan(data);
             } catch (error) {
@@ -32,7 +32,7 @@ export default function Detail() {
         <div>
             <Header title={artisan.nom_artisan} />
             <main>
-                {/* Idéalement : il aurait fallu rajouter les liens des images.Comme elles sont non fournies on ne les affiche pas pour l'instant}*/}
+                {/* Idéalement : il aurait fallu rajouter les liens des images. Comme elles sont non fournies on ne les affiche pas pour l'instant}*/}
                 <AllDetails 
                     note={artisan.note_artisan} 
                     specialite={artisan.Specialite?.nom_specialite}

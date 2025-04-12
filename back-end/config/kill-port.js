@@ -1,7 +1,7 @@
 // kill-port.js
 const { exec } = require('child_process');
 
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 5000;
 
 exec(`netstat -ano | findstr :${PORT}`, (err, stdout) => {
     if (err || !stdout) {

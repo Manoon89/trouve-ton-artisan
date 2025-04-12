@@ -5,8 +5,11 @@ const categorieRoute = require('../routes/categories.js');
 const artisanRoute = require('../routes/artisan.js');
 
 // On récupère les fichiers routes existants
-router.use('/categories', categorieRoute) ;
-router.use('/artisan', artisanRoute) ;
+// On laisse une route simple à '/' car dans le fichier routes/categories.js (id avec artisan etc) 
+// on a défini l'utilisation de la route categorie par '/categories'
+// Si on notait ici la route '/categories', il faudrait alors taper : localhost:3000/api/categories/categories
+router.use('/', categorieRoute) ;
+router.use('/', artisanRoute) ;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

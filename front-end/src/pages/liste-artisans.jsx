@@ -1,6 +1,8 @@
 import React from 'react' ;
 import Header from "../components/header" ;
 import Footer from "../components/footer" ;
+import SomeDetails from "../components/artisan-some";
+import { useParams } from 'react-router-dom';
 
 export default function Liste() {
     return (
