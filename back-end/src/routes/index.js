@@ -3,6 +3,7 @@ const router = express.Router();
 
 const categorieRoute = require('../routes/categories.js');
 const artisanRoute = require('../routes/artisan.js');
+const artisanMoisRoute = require('../routes/artisan-mois.js');
 
 // On récupère les fichiers routes existants
 // On laisse une route simple à '/' car dans le fichier routes/categories.js (id avec artisan etc) 
@@ -10,6 +11,7 @@ const artisanRoute = require('../routes/artisan.js');
 // Si on notait ici la route '/categories', il faudrait alors taper : localhost:3000/api/categories/categories
 router.use('/', categorieRoute) ;
 router.use('/', artisanRoute) ;
+router.use('/', artisanMoisRoute) ;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

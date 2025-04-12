@@ -8,7 +8,7 @@ const MoisAnnee = sequelize.define('MoisAnnee', {
         primaryKey: true
     },
     mois_annee: {
-        type: DataTypes.STRING(15),
+        type: DataTypes.DATE,
         allowNull: false
     }
 }, {

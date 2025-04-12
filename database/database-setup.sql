@@ -54,8 +54,8 @@ CREATE TABLE IF NOT EXISTS `artisan` (
 -- On crée la table mois-année, qui permettra de créer un nouveau trio d'artisans du mois chaque mois
 CREATE TABLE IF NOT EXISTS `mois_annee` (
     `id_mois_annee` INT NOT NULL UNIQUE AUTO_INCREMENT, 
-    `mois_annee` VARCHAR(15) NOT NULL, 
-    PRIMARY KEY (`id_artisan_mois`)
+    `mois_annee` DATE NOT NULL, 
+    PRIMARY KEY (`id_mois_annee`)
 ) ENGINE=InnoDB ;
 
 -- On crée la table relationnelle est-artisan-du-mois, qui aura en clé primaire les clés étrangères des tables artisan & mois-année
