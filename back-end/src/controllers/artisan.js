@@ -3,8 +3,8 @@ const Artisan = require('../models/artisan') ;
 const Specialite = require('../models/specialite') ;
 const Ville = require('../models/ville') ;
 const Categorie = require('../models/categorie') ;
-const { sequelize } = require('../../config/sequelize') ;
-const { Op } = require('sequelize') ;
+
+// Je n'ai pas réussi à utiliser sequelize pour les requêtes. 
 
 exports.getArtisanById = async (req, res, next) => {
     try {
