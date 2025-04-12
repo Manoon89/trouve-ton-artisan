@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from 'react';
+import { Link } from 'react-router-dom' ;
 import Header from "../components/header" ;
 import Footer from "../components/footer" ;
 import SomeDetails from "../components/artisan-some";
@@ -48,13 +49,18 @@ export default function Accueil() {
                         <p>Chargement des artisans...</p>
                     ) : (
                         artisansMois.map(artisansMois => (
-                            <SomeDetails
+                            <Link 
+                                to={`/detail-artisan/${artisansMois.Artisan?.id_artisan}`}
                                 key={`${artisansMois.id_artisan}-${artisansMois.id_mois_annee}`}
-                                titleMonth={artisansMois.Artisan?.nom_artisan}
-                                note={artisansMois.Artisan?.note_artisan}
-                                specialite={artisansMois.Artisan?.Specialite?.nom_specialite}
-                                ville={artisansMois.Artisan?.Ville?.nom_ville}
-                            />
+                            >
+                                <SomeDetails
+
+                                    titleMonth={artisansMois.Artisan?.nom_artisan}
+                                    note={artisansMois.Artisan?.note_artisan}
+                                    specialite={artisansMois.Artisan?.Specialite?.nom_specialite}
+                                    ville={artisansMois.Artisan?.Ville?.nom_ville}
+                                />
+                            </Link>
                         ))
                     )}
                 </section>
@@ -63,3 +69,4 @@ export default function Accueil() {
         </div>
     ) ;
 } ;
+

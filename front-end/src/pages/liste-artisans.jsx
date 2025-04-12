@@ -15,7 +15,7 @@ export default function Liste() {
     // On récupère avec fetch les informations de l'api ; on stocke la réponse en json puis les données complètent le tableau
     // défini ci-dessus. L'url est dynamique et dès lors que l'id change, les données changent également. 
     useEffect(() => {
-        const fetchArtisans = async () => {
+        const fetchArtisans = async () => { 
             try {
                 let url = '';
 
@@ -53,13 +53,18 @@ export default function Liste() {
                     <p>Aucun artisan trouvé correspondant à cette recherche</p>
                 ) : (
                     artisans.map(artisan => (
-                        <SomeDetails
+                        <Link 
+                            to={`/detail-artisan/${artisan.id_artisan}`}
                             key={artisan.id_artisan}
-                            titleList={artisan.nom_artisan} 
-                            note={artisan.note_artisan} 
-                            specialite={artisan.Specialite?.nom_specialite} 
-                            ville={artisan.Ville?.nom_ville}
-                        />
+                        >
+                            <SomeDetails
+
+                                titleList={artisan.nom_artisan} 
+                                note={artisan.note_artisan} 
+                                specialite={artisan.Specialite?.nom_specialite} 
+                                ville={artisan.Ville?.nom_ville}
+                            />
+                        </Link>
                     ))
                 )}
             </main>
