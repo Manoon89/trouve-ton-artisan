@@ -4,7 +4,7 @@ DROP DATABASE IF EXISTS `trouve-ton-artisan` ;
 -- On crée une nouvelle base de données
 CREATE DATABASE IF NOT EXISTS `trouve-ton-artisan`
 DEFAULT CHARACTER SET utf8mb4
-DEFAULT COLLATE utf8mb4_bin ;
+DEFAULT COLLATE utf8mb4_general_ci ;
 
 -- On se place sur la base de données créée 
 USE `trouve-ton-artisan` ;
