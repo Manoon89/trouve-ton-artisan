@@ -21,7 +21,7 @@ export default function Nav() {
                 const data = await response.json();
                 setCategories(data);
             } catch (error) {
-                console.error('Erreur lors de la récupération des informations :', error);
+                console.error('Erreur lors de la récupération des catégories :', error);
             }
         };
     
@@ -39,7 +39,7 @@ export default function Nav() {
     return (
     
         <nav>
-            <a href="#">
+            <a href="/">
                 {/*TODO : taille de l'image à gérer aillers*/}
                 <img src={Logo} alt="logo du site trouve ton artisan" width="30%"/>
             </a>

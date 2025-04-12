@@ -21,8 +21,6 @@ const Specialite = sequelize.define('Specialite', {
     timestamps: false
 }) ;
 
-console.log('Categorie:', Categorie);
-
 Specialite.belongsTo(Categorie, {foreignKey: 'id_categorie'}) ;
 
 module.exports = Specialite ;

@@ -4,8 +4,6 @@ const Specialite = require('../models/specialite') ;
 const Ville = require('../models/ville') ;
 const Categorie = require('../models/categorie') ;
 
-// Je n'ai pas réussi à utiliser sequelize pour les requêtes. 
-
 exports.getArtisanById = async (req, res, next) => {
     try {
         // On utilise FindOne car findById est déprécié dans sequelize
