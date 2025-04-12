@@ -4,6 +4,7 @@ const router = express.Router();
 const categorieRoute = require('../routes/categories.js');
 const artisanRoute = require('../routes/artisan.js');
 const artisanMoisRoute = require('../routes/artisan-mois.js');
+const emailRoute = require('../routes/email.js');
 
 // On récupère les fichiers routes existants
 // On laisse une route simple à '/' car dans le fichier routes/categories.js (id avec artisan etc) 
@@ -12,6 +13,7 @@ const artisanMoisRoute = require('../routes/artisan-mois.js');
 router.use('/', categorieRoute) ;
 router.use('/', artisanRoute) ;
 router.use('/', artisanMoisRoute) ;
+router.use('/', emailRoute) ;
 
 /* GET home page. */
 router.get('/', function(req, res, next) {

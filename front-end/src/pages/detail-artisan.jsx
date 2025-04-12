@@ -25,7 +25,7 @@ export default function Detail() {
         };
     
         fetchArtisan();
-    }, [id]); 
+    }, [id]); // On met à jour à chaque changement d'id dans l'URL
 
     return (
         <div>
