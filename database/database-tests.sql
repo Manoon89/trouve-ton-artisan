@@ -33,7 +33,8 @@ WHERE `artisan`.`nom_artisan` = 'Mont Blanc Eléctricité' ;
 SELECT `artisan`.`nom_artisan`, `mois_annee`.`mois_annee` FROM `artisan_mois`
 INNER JOIN `artisan` ON `artisan_mois`.`id_artisan` = `artisan`.`id_artisan`
 INNER JOIN `mois_annee` ON `artisan_mois`.`id_mois_annee` = `mois_annee`.`id_mois_annee`
-WHERE `mois_annee`.`mois_annee` = 'avril 2025' ;
+WHERE MONTH(`mois_annee`) = MONTH(CURDATE())
+    AND YEAR(`mois_annee`.`mois_annee`) = YEAR(CURDATE()) ;
 
 -- Résultat attendu : Au pain chaud, Chocolaterie Labbé, Orville Salmons
 -- Résultat obtenu : Au pain chaud, Chocolaterie Labbé, Orville Salmons

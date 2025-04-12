@@ -1,25 +1,23 @@
-/*const { Datatypes } = require('sequelize') ;
+const { DataTypes } = require('sequelize') ;
+const { sequelize } = require('../../config/sequelize') ;
 const Artisan = require('./artisan') ;
+const MoisAnnee = require('./mois-annee') ;
 
 const ArtisanMois = sequelize.define('ArtisanMois', {
-    id_artisan_mois: {
-        type: Datatypes.INTEGER, 
-        autoIncrement: true, 
+    id_artisan: {
+        type: DataTypes.INTEGER, 
         primaryKey: true
     }, 
-    mois_annee: {
-        type: Datatypes.STRING(15), 
-        allowNull: false
-    },
-    id_artisan: {
-        type: Datatypes.INTEGER, 
-        allowNull: false
+    id_mois_annee: {
+        type: DataTypes.INTEGER, 
+        primaryKey: true
     }
 }, {
     tableName: 'artisan_mois', 
     timestamps: false
 }) ;
 
-ArtisanMois.hasMany(Artisan, {foreignKey: 'id_artisan', constraints: false}) ;
+ArtisanMois.belongsTo(Artisan, {foreignKey: 'id_artisan'}) ;
+ArtisanMois.belongsTo(MoisAnnee, {foreignKey: 'id_mois_annee'}) ;
 
-module.exports = ArtisanMois ;*/
+module.exports = ArtisanMois ;

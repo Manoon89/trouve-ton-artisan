@@ -1,5 +1,6 @@
 import React from 'react' ;
 import logo from '../assets/images/logo.png' ;
+import { Link } from 'react-router-dom';
 
 export default function Footer() {
     return (
@@ -22,11 +23,11 @@ export default function Footer() {
                 </section>
 
                 <div>
-                    <a href="#">Mentions légales</a>                
-                    <a href="#">Données personnelles</a>
-                    <a href="#">Accessibilité</a>
-                    <a href="#">Politique des cookies</a>
-                    <a href="#">Gestion des cookies</a>
+                <Link to="/en-cours">Mentions légales</Link>
+                <Link to="/en-cours">Données personnelles</Link>
+                <Link to="/en-cours">Accessibilité</Link>
+                <Link to="/en-cours">Politique des cookies</Link>
+                <Link to="/en-cours">Gestion des cookies</Link>
                 </div>
         </footer>
     )

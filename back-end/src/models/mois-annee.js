@@ -1,19 +1,19 @@
 const { DataTypes } = require('sequelize');
 const { sequelize } = require('../../config/sequelize');
 
-const Categorie = sequelize.define('Categorie', {
-    id_categorie: {
+const MoisAnnee = sequelize.define('MoisAnnee', {
+    id_mois_annee: {
         type: DataTypes.INTEGER,
         autoIncrement: true,
         primaryKey: true
     },
-    nom_categorie: {
-        type: DataTypes.STRING(20),
+    mois_annee: {
+        type: DataTypes.DATE,
         allowNull: false
     }
 }, {
-    tableName: 'categorie',
+    tableName: 'mois_annee',
     timestamps: false
 });
 
-module.exports = Categorie;
+module.exports = MoisAnnee;

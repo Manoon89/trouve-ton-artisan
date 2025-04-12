@@ -1,8 +1,8 @@
 import React from 'react' ;
 
-export default function Form() {
+export default function Form(props) {
     return(
-        <form action="#" method="post">
+        <form action={props.email} method="post">
             <h2>Contacter cet artisan</h2>
 
             <label htmlFor="name">Nom</label>

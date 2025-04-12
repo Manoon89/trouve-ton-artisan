@@ -65,7 +65,7 @@ INSERT INTO `artisan` (`id_artisan`, `nom_artisan`, `note_artisan`, `a_propos_ar
 
 -- Peuplement de la table mois-année. Pas de données dans le devoir donc on part juste sur le mois en cours pour pouvoir remonter les artisans
 INSERT INTO `mois_annee` (`id_mois_annee`, `mois_annee`) VALUES
-(1, 'avril 2025') ;
+(1, '2025-04-01') ;
 
 -- Peuplement de la table artisan du mois.
 INSERT INTO `artisan_mois` (`id_artisan`, `id_mois_annee`) VALUES

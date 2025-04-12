@@ -9,11 +9,7 @@ const indexRouter = require('./src/routes/index');
 
 const app = express();
 
-app.use(cors({
-    origin: 'http://localhost:5174',  // Permet les requêtes de ce domaine
-    methods: ['GET', 'POST', 'PUT', 'DELETE'], // Permet certains types de requêtes
-    allowedHeaders: ['Content-Type', 'Authorization']  // Permet certaines headers
-}));
+app.use(cors());
 
 app.use(logger('dev'));
 app.use(express.json());
