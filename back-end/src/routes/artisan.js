@@ -3,7 +3,7 @@ const router = express.Router();
 
 const controllerArtisan = require('../controllers/artisan') ;
 
-router.get('/artisans/categorie/:categorie', controllerArtisan.getArtisansByCategorie) ;
+router.get('/artisans/categorie/:id', controllerArtisan.getArtisansByCategorie) ;
 
 router.get('/artisans/name/:name', controllerArtisan.getArtisansByName) ;
 

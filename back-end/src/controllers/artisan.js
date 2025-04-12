@@ -32,13 +32,12 @@ exports.getArtisanById = async (req, res, next) => {
     }
 } ;
 
-// Manque le filtre par catégorie. Ne fonctionne pas. On reviendra dessus plus tard. 
 exports.getArtisansByCategorie = async (req, res, next) => {
     
     try {
 
         // On vérifie que le paramètre de recherche est bien présent
-        const categorie = req.params.categorie ;
+        const categorie = req.params.id ;
 
         if (!categorie) {
             return res.status(400).json({ error: "Le paramètre 'categorie' est requis" });
@@ -49,11 +48,11 @@ exports.getArtisansByCategorie = async (req, res, next) => {
                 { 
                     model : Specialite, 
                     attributes: ['nom_specialite'], 
+                    where: {id_categorie: categorie},
                     include: [
                         { 
                             model : Categorie, 
                             attributes: ['nom_categorie'], 
-                            where: {nom_categorie: categorie}
                     }
                     ]
                 }, 
