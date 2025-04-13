@@ -1,9 +1,138 @@
-/*@import "bootstrap/scss/functions" ;
-@import "bootstrap/scss/variables" ;
-@import "bootstrap/scss/mixins" ;
-// On importe maintenant les composants Bootstrap dont on a besoin : 
-@import "bootstrap/scss/forms" ;
-@import "bootstrap/scss/navbar" ;
+// Import des variables puis de Bootstrap complet, et enfin de la police
+// On devrait utiliser @use car @import déprécié mais j'ai une erreur bloquante. Donc je pars sur @import.
+@use "bootstrap/scss/bootstrap" as *;
+@use "./fonts.scss";
+@use "./variables.scss" as custom;
 
-// On définit la couleur primaire par défaut pour qu'elle ne soit plus celle définie par Bootstrap
-$primary: #0074c7 ;*/
+// Styles personnalisés
+main {
+    margin: auto;
+}
+
+body {
+    font-family: custom.$font-family-base;
+    font-size: custom.$font-size-base;
+    color: custom.$primary;
+
+
+    .icon{
+        width: 1em;
+        margin-right: 1em;
+        padding-bottom: 0.2em;
+    }
+
+    a{
+        text-decoration: none;
+    }
+
+    header{
+        nav{
+            background-color: custom.$light;
+            .custom-border{
+                border-top: 1px solid #0074c7;
+                border-left: 1px solid #0074c7;
+                border-right: 2px solid #0074c7;
+                border-bottom: 2px solid #0074c7;
+                border-radius: 0;
+            };
+            .logo{
+                min-width: 7em;
+            }
+            .search-big{
+                min-width: 35%;
+                max-width: 40%;
+            }
+            .navbar-toggler {
+                border: none; // Optionnel : enlève la bordure
+            
+                .navbar-toggler-icon {
+                    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='%230074c7' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+                }
+            
+                .menu-text {
+                    font-size: 0.8rem;
+                    color: #0074c7;
+                    text-transform: uppercase;
+                    margin-top: 0.2rem;
+                }
+            }
+        }
+    }
+
+    h1, h2, h3{
+        font-family: GraphikBold, sans-serif;
+        font-weight: 800;
+        color: custom.$info;
+        text-align: center;
+    }
+
+    h1{
+        font-size: 1.875em;
+        margin-top: 1.5em;
+        margin-bottom: 2em;
+    }
+
+    h2{
+        font-size: 1.5625em;
+        margin-bottom: 0.5em;
+    }
+
+    h3{
+        font-size: 1em;
+    }
+
+    .some{
+        text-align: center;
+        .note{
+            color: custom.$success;
+        }
+    }
+    .step{
+        box-shadow: 2px 2px 2px 1px rgba(56, 64, 80, 0.25) ;
+        padding: 1em 2em;
+        min-height: 20vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        text-align: center;
+    }
+
+    .month{ 
+        .some{
+            box-shadow: 2px 2px 2px 1px rgba(56, 64, 80, 0.25) ;
+            margin-bottom: 1em;
+            background-color: custom.$light;
+            border: 1px solid rgba(0, 116, 199, 0.5);
+            border-radius: 0.2em;
+            min-height: 20vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            @media (min-width: 1400px) {
+                min-height: 328px; 
+            }
+        }
+    }
+
+    footer, footer h3{
+        font-family: Graphik, sans-serif;
+        color: custom.$light;
+        background-color: custom.$primary;
+        text-align: center;
+        a{
+            color: custom.$light;
+        }
+        section{
+            padding: 2em;
+        }
+        .footerLogo{
+            width: 100%;
+            filter: brightness(0) invert(1);
+        }
+        .location{
+            font-family: GraphikBold, sans-serif; 
+            margin-top: 2em;   
+            margin-bottom: 2em;
+        }
+    }
+}

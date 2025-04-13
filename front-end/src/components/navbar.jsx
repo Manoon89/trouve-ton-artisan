@@ -1,6 +1,6 @@
 import React, {useEffect, useState} from 'react' ;
 import Logo from '../assets/images/logo.png' ;
-import Search from '../assets/icons/search.svg' ;
+import Search from '../assets/icons/search.png' ;
 import { Link, useNavigate } from 'react-router-dom' ;
 
 export default function Nav() {
@@ -38,36 +38,69 @@ export default function Nav() {
 
     return (
     
-        <nav>
-            <a href="/">
-                {/*TODO : taille de l'image à gérer aillers*/}
-                <img src={Logo} alt="logo du site trouve ton artisan" width="30%"/>
-            </a>
+        <nav className="navbar navbar-expand-lg">
+            <div className="container-fluid">
 
-            <form onSubmit={handleSearchSubmit} method="post">
-                <input 
-                    type="text" 
-                    name="searchbar" 
-                    id="searchbar" 
-                    placeholder="Rechercher" 
-                    value={searchTerm}
-                    onChange={(e) => setSearchTerm(e.target.value)}
-                />
-                {/*TODO : taille de l'image à gérer aillers*/}
-                <button type="submit" name="submit" id="submit">
-                    <img src={Search} alt="loupe de recherche" width="2%" />
-                </button>
-            </form>
+                    <a href="/" className="navbar-brand w-25">
+                        <img src={Logo} alt="logo du site trouve ton artisan" className="logo w-100"/>
+                    </a>
 
-            <ul>
-                {categories.map((categorie) => (
-                    <li key={categorie.id_categorie}>
-                        <Link to={`/categories/${categorie.id_categorie}`}>
-                            {categorie.nom_categorie}
-                        </Link>
-                    </li>
-                ))}
-            </ul>
+                    <form onSubmit={handleSearchSubmit} method="post" className="d-none d-md-flex me-2 search-big">
+                        <input 
+                            type="text" 
+                            name="searchbar" 
+                            id="searchbar" 
+                            placeholder="Rechercher" 
+                            className="form-control me-2 custom-border"
+                            value={searchTerm}
+                            onChange={(e) => setSearchTerm(e.target.value)}
+                        />
+                        <button type="submit" name="submit" id="submit" className="btn bg-light border border-light rounded p-2">
+                            <img src={Search} alt="loupe de recherche"/>
+                        </button>
+                    </form>
+
+                    <button 
+                        className="navbar-toggler" 
+                        type="button" 
+                        data-bs-toggle="collapse" 
+                        data-bs-target="#navbarNav" 
+                        aria-controls="navbarNav" 
+                        aria-expanded="false" 
+                        aria-label="Toggle navigation"
+                    >
+                        <div className="navbar-toggler-icon"></div>
+                        <div className="menu-text">Menu</div>
+                    </button>
+
+                    <div className="collapse navbar-collapse" id="navbarNav">
+                        <form onSubmit={handleSearchSubmit} method="post" className="d-block d-md-none">
+                            <input 
+                                type="text" 
+                                name="searchbar" 
+                                id="searchbar" 
+                                placeholder="Rechercher" 
+                                className="form-control me-2 custom-border"
+                                value={searchTerm}
+                                onChange={(e) => setSearchTerm(e.target.value)}
+                            />
+                            <button type="submit" name="submit" id="submit" className="btn bg-light border border-light rounded p-2">
+                                <img src={Search} alt="loupe de recherche"/>
+                            </button>
+                        </form>
+
+                        <ul className="navbar-nav flex-row w-100 justify-content-between mb-2 me-4">
+                            {categories.map((categorie) => (
+                                <li key={categorie.id_categorie} className="nav-item">
+                                    <Link to={`/categories/${categorie.id_categorie}`} className="nav-link" >
+                                        {categorie.nom_categorie}
+                                    </Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </div>
+
+            </div>
         </nav>
 
     )
