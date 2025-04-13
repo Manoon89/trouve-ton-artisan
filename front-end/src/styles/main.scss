@@ -9,6 +9,7 @@ body {
     font-family: custom.$font-family-base;
     font-size: custom.$font-size-base;
     color: custom.$primary;
+    margin: 1em;
 
     .error{
         width: 95%;
@@ -83,7 +84,7 @@ body {
         font-size: 1em;
     }
 
-    .some{
+    .some, .card{
         text-align: center;
         .note{
             color: custom.$success;
@@ -113,6 +114,14 @@ body {
             @media (min-width: 1400px) {
                 min-height: 328px; 
             }
+        }
+    }
+
+    .card{
+        color: custom.$primary;
+        h2{
+            color: custom.$info;
+            background-color: custom.$light;
         }
     }
 
