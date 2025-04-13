@@ -5,15 +5,17 @@
 @use "./variables.scss" as custom;
 
 // Styles personnalisés
-main {
-    margin: auto;
-}
-
 body {
     font-family: custom.$font-family-base;
     font-size: custom.$font-size-base;
     color: custom.$primary;
 
+    .error{
+        width: 95%;
+        margin-left: 2em;
+        margin-right: 2em;
+        margin-bottom: 5em;
+    }
 
     .icon{
         width: 1em;

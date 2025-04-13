@@ -25,7 +25,7 @@ export default function Footer() {
                         </address>
                     </section>
 
-                    <div className="col-lg-4 d-flex flex-column align-items-lg-end">
+                    <div className="col-lg-4 d-flex flex-column align-items-lg-end mb-4">
                         <Link to="/en-cours">Mentions légales</Link>
                         <Link to="/en-cours">Données personnelles</Link>
                         <Link to="/en-cours">Accessibilité</Link>
