@@ -25,9 +25,9 @@ const specs = swaggerJsdoc(options);
 
 const app = express();
 
-app.use(cors(
-  //TODO : noter le domaine du front-end pour limiter l'accès au back-end. 
-));
+app.use(cors({
+  origin: 'https://trouve-ton-artisan-1.onrender.com'
+}));
 
 app.use(logger('dev'));
 app.use(express.json());

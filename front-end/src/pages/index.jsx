@@ -16,7 +16,7 @@ export default function Accueil() {
     useEffect(() => {
         const fetchArtisansMois = async () => {
             try{
-                const response = await fetch(`http://localhost:5000/api/artisan-mois`);
+                const response = await fetch(`https://trouve-ton-artisan-1.onrender.com/api/artisan-mois`);
                 const data = await response.json();
                 setArtisansMois(data);
             } catch (error) {
