@@ -59,6 +59,7 @@ export default function Liste() {
                                 <Link 
                                     to={`/detail-artisan/${artisan.id_artisan}`}
                                     key={artisan.id_artisan}
+                                    target="_blank"
                                 >
                                     <Card
                                         titleList={artisan.nom_artisan} 

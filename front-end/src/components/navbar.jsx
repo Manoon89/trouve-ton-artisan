@@ -92,7 +92,7 @@ export default function Nav() {
                         <ul className="navbar-nav flex-row w-100 justify-content-between mb-2 me-4">
                             {categories.map((categorie) => (
                                 <li key={categorie.id_categorie} className="nav-item">
-                                    <Link to={`/categories/${categorie.id_categorie}`} className="nav-link" >
+                                    <Link to={`/categories/${categorie.id_categorie}`} className="nav-link" target="_blank" >
                                         {categorie.nom_categorie}
                                     </Link>
                                 </li>
