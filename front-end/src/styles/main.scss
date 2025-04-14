@@ -86,10 +86,8 @@ body {
 
     .some, .card{
         text-align: center;
-        .note{
-            color: custom.$success;
-        }
     }
+
     .step{
         box-shadow: 2px 2px 2px 1px rgba(56, 64, 80, 0.25) ;
         padding: 1em 2em;
@@ -125,6 +123,47 @@ body {
         }
     }
 
+    .text-justify{
+        text-align: justify;
+    }
+
+    .note{
+        color: custom.$success;
+    }
+
+    .specialite{
+        background-color: custom.$light;
+        border: 1px solid custom.$primary;
+        padding-bottom: 0.2em;
+        box-shadow: 2px 2px 2px 1px rgba(56, 64, 80, 0.25) ;
+    }
+
+    .contact{
+        border: 1px solid rgba(56, 64, 80, 0.50);
+        padding: 2em;
+        background-color: custom.$light;
+        .message{
+            min-height: 30vh;
+        }
+    }
+
+    .artisan{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        @media (min-width: 1200px) {
+            .artisan-first{
+                flex: 1;
+            }
+        }
+        @media (min-width: 1200px) {        
+            .artisan-second{
+                flex: 2;
+                height: 100vh;
+            }
+        }
+    }
+
     footer, footer h3{
         font-family: Graphik, sans-serif;
         color: custom.$light;
@@ -145,5 +184,9 @@ body {
             margin-top: 2em;   
             margin-bottom: 2em;
         }
+    }
+
+    footer{
+        margin-top: 3em;
     }
 }

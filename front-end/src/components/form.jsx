@@ -78,24 +78,35 @@ export default function Form({ email }) {
     } ;
  
     return(
-        <form onSubmit={handleSubmit}>
-            <h2>Contacter cet artisan</h2>
+        <div className="col-lg-6">
+            <form onSubmit={handleSubmit} className="contact">
+                <h2>Contacter cet artisan</h2>
 
-            <label htmlFor="name">Nom</label>
-            <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} />
+                <div className="mb-3">
+                    <label htmlFor="name" className="form-label">Nom</label>
+                    <input type="text" name="name" id="name" value={formData.name} onChange={handleChange} className="form-control"/>
+                </div>
 
-            <label htmlFor="email">Email</label>
-            <input type="email" name="senderEmail" id="senderEmail" value={formData.senderEmail} onChange={handleChange} />
+                <div className="mb-3">
+                    <label htmlFor="email" className="form-label">Email</label>
+                    <input type="email" name="senderEmail" id="senderEmail" value={formData.senderEmail} onChange={handleChange} className="form-control" />
+                </div>
 
-            <label htmlFor="object">Objet</label>
-            <input type="text" name="object" id="object" value={formData.object} onChange={handleChange} />
+                <div className="mb-3">
+                    <label htmlFor="object" className="form-label">Objet</label>
+                    <input type="text" name="object" id="object" value={formData.object} onChange={handleChange} className="form-control" />
+                </div>
 
-            <label htmlFor="message">Message</label>
-            <textarea name="message" id="message" value={formData.message} onChange={handleChange} />
+                <div className="mb-3">
+                    <label htmlFor="message" className="form-label">Message</label>
+                    <textarea name="message" id="message" value={formData.message} onChange={handleChange} className="form-control message"/>
+                </div>
 
-            <input type="submit" value="Envoyer" />
+                <input type="submit" value="Envoyer" className="btn btn-primary"/>
 
-            {messageStatus && <p>{messageStatus}</p>}
-        </form>
+                {messageStatus && <p>{messageStatus}</p>}
+
+            </form>
+        </div>
     ) ;
 } ;
