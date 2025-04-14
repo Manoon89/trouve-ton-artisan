@@ -7,11 +7,6 @@ const cors = require ('cors') ;
 const swaggerJsdoc = require('swagger-jsdoc');
 const swaggerUi = require('swagger-ui-express');
 
-const allowedOrigins = [
-  'https://trouve-ton-artisan-front.onrender.com',
-  'http://localhost:5174'
-];
-
 const indexRouter = require('./src/routes/index');
 
 const options = {
@@ -30,15 +25,7 @@ const specs = swaggerJsdoc(options);
 
 const app = express();
 
-app.use(cors({
-  origin: (origin, callback) => {
-    if (!origin || allowedOrigins.includes(origin)) {
-      callback(null, true);
-    } else {
-      callback(new Error('Not allowed by CORS'));
-    }
-  }
-}));
+app.use(cors());
 
 app.use(logger('dev'));
 app.use(express.json());
