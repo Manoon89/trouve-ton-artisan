@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "private": true,
   "scripts": {
-    "start": "node ./config/kill-port.js && env-cmd -f ./env/.env nodemon ./bin/www",
+    "start": "node ./bin/www",
     "dev": "node ./config/kill-port.js && env-cmd -f ./env/.env.dev nodemon ./bin/www",
     "prod": "node ./config/kill-port.js && env-cmd -f ./env/.env.prod nodemon ./bin/www", 
     "doc": "jsdoc -c jsdoc.json"
