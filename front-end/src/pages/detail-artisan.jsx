@@ -4,6 +4,7 @@ import Footer from "../components/footer" ;
 import Form from "../components/form" ;
 import AllDetails from "../components/artisan-details";
 import { useParams } from 'react-router-dom';
+const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
 
 export default function Detail() {
 
@@ -16,7 +17,7 @@ export default function Detail() {
     useEffect(() => {
         const fetchArtisan = async () => {
             try {
-                const response = await fetch(`https://trouve-ton-artisan-1.onrender.com/api/details-artisan/${id}`);
+                const response = await fetch(`${BACKEND_URL}/api/details-artisan/${id}`);
                 const data = await response.json();
                 setArtisan(data);
             } catch (error) {

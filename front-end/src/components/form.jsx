@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
 
 // On destructure la props & on indique directement ici le nom de la prop, à savoir : email. 
 export default function Form({ email }) {
@@ -48,7 +49,7 @@ export default function Form({ email }) {
         try {
 
             const response = await fetch(
-                'http://localhost:5000/api/send-email', 
+                '${BACKEND_URL}/api/send-email', 
                 {
                     method: 'POST', 
                     headers: { 'Content-Type': 'application/json'}, 

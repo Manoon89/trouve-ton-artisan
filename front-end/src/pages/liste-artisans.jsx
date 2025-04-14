@@ -4,6 +4,7 @@ import Footer from "../components/footer" ;
 import Card from "../components/artisan-card";
 import { useParams } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom' ;
+const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
 
 export default function Liste() {
 
@@ -20,11 +21,11 @@ export default function Liste() {
                 let url = '';
 
                 if (id) {
-                    url = `https://trouve-ton-artisan-1.onrender.com/api/artisans/categorie/${id}`;
+                    url = `${BACKEND_URL}/api/artisans/categorie/${id}`;
                 }
 
                 else if (name) {
-                    url = `https://trouve-ton-artisan-1.onrender.com/api/artisans/name/${name}`;
+                    url = `${BACKEND_URL}/api/artisans/name/${name}`;
                 }
 
                 const response = await fetch(url);

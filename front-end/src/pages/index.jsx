@@ -5,6 +5,7 @@ import Footer from "../components/footer" ;
 import SomeDetails from "../components/artisan-some";
 import Bulb from '../assets/icons/bulb.png' ;
 import Arrow from '../assets/icons/arrow-right.png' ;
+const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
 
 export default function Accueil() {
     
@@ -16,7 +17,7 @@ export default function Accueil() {
     useEffect(() => {
         const fetchArtisansMois = async () => {
             try{
-                const response = await fetch(`https://trouve-ton-artisan-1.onrender.com/api/artisan-mois`);
+                const response = await fetch(`${BACKEND_URL}/api/artisan-mois`);
                 const data = await response.json();
                 setArtisansMois(data);
             } catch (error) {
