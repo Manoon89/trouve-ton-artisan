@@ -20,11 +20,11 @@ export default function Liste() {
                 let url = '';
 
                 if (id) {
-                    url = `http://localhost:5000/api/artisans/categorie/${id}`;
+                    url = `https://trouve-ton-artisan-1.onrender.com/api/artisans/categorie/${id}`;
                 }
 
                 else if (name) {
-                    url = `http://localhost:5000/api/artisans/name/${name}`;
+                    url = `https://trouve-ton-artisan-1.onrender.com/api/artisans/name/${name}`;
                 }
 
                 const response = await fetch(url);

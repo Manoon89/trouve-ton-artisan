@@ -16,7 +16,7 @@ export default function Detail() {
     useEffect(() => {
         const fetchArtisan = async () => {
             try {
-                const response = await fetch(`http://localhost:5000/api/details-artisan/${id}`);
+                const response = await fetch(`https://trouve-ton-artisan-1.onrender.com/api/details-artisan/${id}`);
                 const data = await response.json();
                 setArtisan(data);
             } catch (error) {
