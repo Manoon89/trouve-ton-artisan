@@ -7,9 +7,8 @@ export default function Error() {
     return (
         <div>
             <Header title="Page non trouvée" />
-            <main>
-                {/* TODO : redimensionner l'image ailleurs*/}
-                <img src={ImgError} alt="image d'erreur" width="100%"/>
+            <main className="d-flex justify-content-center">
+                <img src={ImgError} alt="image d'erreur" className="error"/>
             </main>
             <Footer />
         </div>

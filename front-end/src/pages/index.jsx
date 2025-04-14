@@ -3,8 +3,8 @@ import { Link } from 'react-router-dom' ;
 import Header from "../components/header" ;
 import Footer from "../components/footer" ;
 import SomeDetails from "../components/artisan-some";
-import Bulb from '../assets/icons/bulb.svg' ;
-import Arrow from '../assets/icons/arrow-right.svg' ;
+import Bulb from '../assets/icons/bulb.png' ;
+import Arrow from '../assets/icons/arrow-right.png' ;
 
 export default function Accueil() {
     
@@ -30,41 +30,62 @@ export default function Accueil() {
     return (
         <div>
             <Header title="Trouve ton artisan !" />
-            <main>
-                <section>
-                    {/* TODO : taille de l'image à paramétrer ailleurs*/}
-                    <img src={Bulb} alt="icône de lampe" width="2%" />
-                    <h2>Fonctionnement du site</h2>
-                    <p>1 - Choisir la catégorie d'artisanat dans le menu</p>
-                    <p>2 - Choisir un artisan</p>
-                    <p>3 - Le contacter via le formulaire de contact</p>
-                    <p>4 - Une réponse sera apportée sous 48h</p>
-                </section>
 
-                <section>
-                    <img src={Arrow} alt="icône flèche" width="2%" />
-                    <h2>Les artisans du mois</h2>
+            <main className="container-fluid">
+                <div className="row g-5">                
+                    <section className="col-lg-6">
+                            <h2>
+                                <img src={Bulb} alt="icône de lampe" className="icon" />
+                                Fonctionnement du site
+                            </h2>
+                            <div className="row justify-content-center">
+                                <div className="col-12 col-md-6">
+                                    <p className="step bg-light">1 - Choisir la catégorie d'artisanat dans le menu</p>
+                                </div>
+                                <div className="col-12 col-md-6">
+                                    <p className="step bg-light">2 - Choisir un artisan</p>
+                                </div>
+                                <div className="col-12 col-md-6">
+                                    <p className="step bg-light">3 - Le contacter via le formulaire de contact</p>
+                                </div>
+                                <div className="col-12 col-md-6">
+                                    <p className="step bg-light">4 - Une réponse sera apportée sous 48h</p>
+                                </div>
+                            </div>
+                    </section>
 
-                    {artisansMois.length === 0 ? (
-                        <p>Chargement des artisans...</p>
-                    ) : (
-                        artisansMois.map(artisansMois => (
-                            <Link 
-                                to={`/detail-artisan/${artisansMois.Artisan?.id_artisan}`}
-                                key={`${artisansMois.id_artisan}-${artisansMois.id_mois_annee}`}
-                            >
-                                <SomeDetails
+                    <section className="month col-lg-6">
+                        <h2>
+                            <img src={Arrow} alt="icône flèche" className="icon" />
+                            Les artisans du mois
+                        </h2>
 
-                                    titleMonth={artisansMois.Artisan?.nom_artisan}
-                                    note={artisansMois.Artisan?.note_artisan}
-                                    specialite={artisansMois.Artisan?.Specialite?.nom_specialite}
-                                    ville={artisansMois.Artisan?.Ville?.nom_ville}
-                                />
-                            </Link>
-                        ))
-                    )}
-                </section>
+                        <div className="row">
+                            {artisansMois.length === 0 ? (
+                                <p>Chargement des artisans...</p>
+                            ) : (
+                                artisansMois.map(artisansMois => (
+                                    <Link 
+                                        to={`/detail-artisan/${artisansMois.Artisan?.id_artisan}`}
+                                        key={`${artisansMois.id_artisan}-${artisansMois.id_mois_annee}`}
+                                        className="col-xxl-4"
+                                    >
+                                        <SomeDetails
+
+                                            titleMonth={artisansMois.Artisan?.nom_artisan}
+                                            note={artisansMois.Artisan?.note_artisan}
+                                            specialite={artisansMois.Artisan?.Specialite?.nom_specialite}
+                                            ville={artisansMois.Artisan?.Ville?.nom_ville}
+                                        />
+                                    </Link>
+                                ))
+                            )}
+                        </div>
+                    </section>
+
+                </div>
             </main>
+
             <Footer />
         </div>
     ) ;

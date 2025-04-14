@@ -30,14 +30,17 @@ export default function Detail() {
     return (
         <div>
             <Header title={artisan.nom_artisan} />
-            <main>
+            <main className="row g-5">
                 {/* Idéalement : il aurait fallu rajouter les liens des images. Comme elles sont non fournies on ne les affiche pas pour l'instant}*/}
                 <AllDetails 
                     note={artisan.note_artisan} 
                     specialite={artisan.Specialite?.nom_specialite}
                     ville={artisan.Ville?.nom_ville} 
-                    apropos={artisan.a_propos_artisan} />
-                <Form email={artisan.email_artisan} />
+                    apropos={artisan.a_propos_artisan} 
+                    site={artisan.site_web_artisan}
+                />
+
+                <Form email={artisan.email_artisan}/>
             </main>
             <Footer />
         </div>
