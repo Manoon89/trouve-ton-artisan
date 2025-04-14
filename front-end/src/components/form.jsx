@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
+const BACKEND_URL = "https://trouve-ton-artisan-back.onrender.com";
 
 // On destructure la props & on indique directement ici le nom de la prop, à savoir : email. 
 export default function Form({ email }) {

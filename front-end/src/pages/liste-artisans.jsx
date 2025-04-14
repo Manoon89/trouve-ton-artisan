@@ -4,7 +4,7 @@ import Footer from "../components/footer" ;
 import Card from "../components/artisan-card";
 import { useParams } from 'react-router-dom';
 import { Link, useNavigate } from 'react-router-dom' ;
-const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
+const BACKEND_URL = "https://trouve-ton-artisan-back.onrender.com";
 
 export default function Liste() {
 

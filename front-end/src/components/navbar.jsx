@@ -2,7 +2,7 @@ import React, {useEffect, useState} from 'react' ;
 import Logo from '../assets/images/logo.png' ;
 import Search from '../assets/icons/search.png' ;
 import { Link, useNavigate } from 'react-router-dom' ;
-const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
+const BACKEND_URL = "https://trouve-ton-artisan-back.onrender.com";
 
 export default function Nav() {
 

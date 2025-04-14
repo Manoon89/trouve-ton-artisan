@@ -5,7 +5,7 @@ import Footer from "../components/footer" ;
 import SomeDetails from "../components/artisan-some";
 import Bulb from '../assets/icons/bulb.png' ;
 import Arrow from '../assets/icons/arrow-right.png' ;
-const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
+const BACKEND_URL = "https://trouve-ton-artisan-back.onrender.com";
 
 export default function Accueil() {
     
