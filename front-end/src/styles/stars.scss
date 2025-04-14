@@ -1,0 +1,23 @@
+.stars-out{
+    position: relative;
+    display: inline-block;
+    color: #FFFFFF;
+    font-size: 1.6em;
+
+    &::before{
+        content: "★★★★★";
+    }
+}
+
+.stars-in{
+    position: absolute;
+    top: 0;
+    left: 0;
+    white-space: nowrap;
+    overflow: hidden;
+    color: #82b864;
+
+    &::before{
+        content: "★★★★★";
+    }
+}
