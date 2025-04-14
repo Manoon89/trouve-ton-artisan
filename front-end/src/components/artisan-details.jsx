@@ -7,7 +7,7 @@ export default function AllDetails(props) {
         <div className="col-lg-6 align-items-center">
             <section className="d-flex flex-column flex-lg-row text-center artisan">
                 <div className="artisan-first me-lg-4 w-100">
-                    <img src="{props.img}" alt="image de l'artisan" className="mb-4" />
+                    <img src="{props.img}" alt="image de l'artisan" className="mb-4 d-block" />
                     <Stars note={props.note} />
                     <span className="note m-4">{props.note}</span>
                     <h2 className="specialite mt-4">{props.specialite}</h2>
