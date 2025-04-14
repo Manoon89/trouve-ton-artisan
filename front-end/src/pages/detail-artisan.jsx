@@ -4,7 +4,7 @@ import Footer from "../components/footer" ;
 import Form from "../components/form" ;
 import AllDetails from "../components/artisan-details";
 import { useParams } from 'react-router-dom';
-const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
+const BACKEND_URL = "https://trouve-ton-artisan-back.onrender.com";
 
 export default function Detail() {
 
