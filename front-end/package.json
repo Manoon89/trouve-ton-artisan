@@ -7,7 +7,7 @@
     "dev": "vite",
     "build": "vite build",
     "lint": "eslint .",
-    "preview": "vite preview", 
+    "preview": "vite preview",
     "doc": "jsdoc -c jsdoc.json"
   },
   "dependencies": {
@@ -16,6 +16,7 @@
     "jsdoc": "^4.0.4",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
+    "react-helmet": "^6.1.0",
     "react-router-dom": "^7.5.0",
     "sass": "^1.86.3"
   },

@@ -26,11 +26,11 @@ export default function Footer() {
                     </section>
 
                     <div className="col-lg-4 d-flex flex-column align-items-lg-end mb-4">
-                        <Link to="/en-cours">Mentions légales</Link>
-                        <Link to="/en-cours">Données personnelles</Link>
-                        <Link to="/en-cours">Accessibilité</Link>
-                        <Link to="/en-cours">Politique des cookies</Link>
-                        <Link to="/en-cours">Gestion des cookies</Link>
+                        <Link to="/en-cours" target="_blank">Mentions légales</Link>
+                        <Link to="/en-cours" target="_blank">Données personnelles</Link>
+                        <Link to="/en-cours" target="_blank">Accessibilité</Link>
+                        <Link to="/en-cours" target="_blank">Politique des cookies</Link>
+                        <Link to="/en-cours" target="_blank">Gestion des cookies</Link>
                     </div>
                 </div>
             </div>

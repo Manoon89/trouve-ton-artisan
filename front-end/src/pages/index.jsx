@@ -40,7 +40,7 @@ export default function Accueil() {
                             </h2>
                             <div className="row justify-content-center">
                                 <div className="col-12 col-md-6">
-                                    <p className="step bg-light">1 - Choisir la catégorie d'artisanat dans le menu</p>
+                                    <p className="step bg-light">1 - Choisir la catégorie d'<strong>artisanat</strong> dans le menu</p>
                                 </div>
                                 <div className="col-12 col-md-6">
                                     <p className="step bg-light">2 - Choisir un artisan</p>
@@ -57,7 +57,7 @@ export default function Accueil() {
                     <section className="month col-lg-6">
                         <h2>
                             <img src={Arrow} alt="icône flèche" className="icon" />
-                            Les artisans du mois
+                            Les <strong>artisans du mois</strong>
                         </h2>
 
                         <div className="row">
@@ -69,6 +69,7 @@ export default function Accueil() {
                                         to={`/detail-artisan/${artisansMois.Artisan?.id_artisan}`}
                                         key={`${artisansMois.id_artisan}-${artisansMois.id_mois_annee}`}
                                         className="col-xxl-4"
+                                        target="_blank"
                                     >
                                         <SomeDetails
 
