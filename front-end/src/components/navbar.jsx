@@ -2,6 +2,7 @@ import React, {useEffect, useState} from 'react' ;
 import Logo from '../assets/images/logo.png' ;
 import Search from '../assets/icons/search.png' ;
 import { Link, useNavigate } from 'react-router-dom' ;
+const BACKEND_URL = "https://trouve-ton-artisan-1.onrender.com";
 
 export default function Nav() {
 
@@ -17,7 +18,7 @@ export default function Nav() {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('http://localhost:5000/api/categories');
+                const response = await fetch('${BACKEND_URL}/api/categories');
                 const data = await response.json();
                 setCategories(data);
             } catch (error) {
