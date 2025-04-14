@@ -1,15 +1,16 @@
 import React from 'react' ;
 import Map from "../assets/icons/map-marker.png";
+import Stars from "../components/stars";
 
 export default function AllDetails(props) {
     return(
         <div className="col-lg-6 align-items-center">
             <section className="d-flex flex-column flex-lg-row text-center artisan">
                 <div className="artisan-first me-lg-4 w-100">
-                    {/*TODO : étoiles pour la note*/}
                     <img src="{props.img}" alt="image de l'artisan" className="mb-4" />
-                    <div className="note m-4">{props.note}</div>
-                    <h2 className="specialite">{props.specialite}</h2>
+                    <Stars note={props.note} />
+                    <span className="note m-4">{props.note}</span>
+                    <h2 className="specialite mt-4">{props.specialite}</h2>
                     <p className="fst-italic mt-4 mb-4">
                         <img src={Map} alt="icône de carte" className="icon" />
                         {props.ville}
