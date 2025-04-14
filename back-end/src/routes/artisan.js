@@ -50,7 +50,7 @@ router.get('/artisans/name/:name', controllerArtisan.getArtisansByName) ;
 // Peut-être on aurait pu simplifier & n'utiliser que la fonction getArtisansByName...
 /**
  * @swagger
- * /details-artisan/:id
+ * /details-artisan/:id:
  *      get:
  *          summary: récupère l'artisan qui correspond à un identifiant en particulier
  *          tags: [Artisans]
