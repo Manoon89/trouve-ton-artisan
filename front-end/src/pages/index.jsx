@@ -70,7 +70,6 @@ export default function Accueil() {
                                         to={`/detail-artisan/${artisansMois.Artisan?.id_artisan}`}
                                         key={`${artisansMois.id_artisan}-${artisansMois.id_mois_annee}`}
                                         className="col-xxl-4"
-                                        target="_blank"
                                     >
                                         <SomeDetails
 
