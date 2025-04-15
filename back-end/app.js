@@ -25,7 +25,7 @@ const specs = swaggerJsdoc(options);
 
 const app = express();
 
-app.use(cors());
+app.use(cors({origin: 'https://trouve-ton-artisan-front.onrender.com'}));
 
 app.use(logger('dev'));
 app.use(express.json());
