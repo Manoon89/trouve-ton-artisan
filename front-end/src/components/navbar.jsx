@@ -18,7 +18,7 @@ export default function Nav() {
     useEffect(() => {
         const fetchCategories = async () => {
             try {
-                const response = await fetch('${BACKEND_URL}/api/categories');
+                const response = await fetch(`${BACKEND_URL}/api/categories`);
                 const data = await response.json();
                 setCategories(data);
             } catch (error) {
